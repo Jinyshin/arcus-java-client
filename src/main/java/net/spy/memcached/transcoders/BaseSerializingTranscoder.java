@@ -26,7 +26,6 @@ import java.io.ObjectStreamClass;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Proxy;
 
-import net.spy.memcached.CachedData;
 import net.spy.memcached.compat.SpyObject;
 
 /**
@@ -60,10 +59,6 @@ public abstract class BaseSerializingTranscoder extends SpyObject {
     super();
     this.maxSize = max;
     this.classLoader = cl;
-  }
-
-  public boolean asyncDecode(CachedData d) {
-    return false;
   }
 
   /**
